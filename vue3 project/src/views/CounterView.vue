@@ -11,7 +11,10 @@ let counter = useCounterStore();
     <div>
         <h1>{{ counter.count }}</h1>
 
-        <button @click="counter.increment()">Increament</button>
+        <button 
+            @click="counter.increment()"
+            :disabled="! counter.remaining"
+            >Increament ({{ counter.remaining}} Remaining)</button>
     </div>
 
 </template>
