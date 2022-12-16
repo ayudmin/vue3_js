@@ -5,5 +5,11 @@ export let useCounterStore = defineStore('counter', {
         return {
             count: 0
         };
+    },
+
+    actions: {
+        increment(){
+            this.count++;
+        }
     }
 });
